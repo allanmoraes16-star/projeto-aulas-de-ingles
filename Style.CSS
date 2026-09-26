@@ -1,0 +1,439 @@
+projeto-greetings/
+├── index.html
+├── style.css
+└── script.js
+/* =========================
+   CONFIGURAÇÕES GERAIS
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f4f7fb;
+    color: #1f2937;
+    min-height: 100vh;
+}
+
+
+/* =========================
+   CABEÇALHO
+========================= */
+
+header {
+    background: #1e3a8a;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 28px;
+    margin-bottom: 5px;
+}
+
+header p {
+    font-size: 14px;
+    opacity: 0.9;
+}
+
+
+/* =========================
+   CONTAINER PRINCIPAL
+========================= */
+
+.container {
+    width: 90%;
+    max-width: 750px;
+    margin: 40px auto;
+}
+
+
+/* =========================
+   PROGRESSO
+========================= */
+
+.progress-area {
+    margin-bottom: 20px;
+}
+
+.progress-text {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 12px;
+    background: #dbe3ef;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.progress {
+    width: 20%;
+    height: 100%;
+    background: #2563eb;
+    transition: 0.3s;
+}
+
+
+/* =========================
+   CARD DA ATIVIDADE
+========================= */
+
+.card {
+    background: white;
+    border-radius: 16px;
+    padding: 30px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+
+/* =========================
+   TIPO DE ATIVIDADE
+========================= */
+
+.stage {
+    display: inline-block;
+    background: #dbeafe;
+    color: #1d4ed8;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+
+/* =========================
+   TÍTULOS
+========================= */
+
+.card h2 {
+    font-size: 26px;
+    margin-bottom: 10px;
+    color: #111827;
+}
+
+.instruction {
+    color: #6b7280;
+    margin-bottom: 25px;
+}
+
+
+/* =========================
+   BLOCO DE CONTEÚDO
+========================= */
+
+.lesson-box {
+    background: #eff6ff;
+    border-left: 5px solid #2563eb;
+    padding: 18px;
+    border-radius: 10px;
+    margin-bottom: 25px;
+}
+
+.lesson-box h3 {
+    margin-bottom: 10px;
+}
+
+.lesson-box p {
+    margin: 7px 0;
+}
+
+
+/* =========================
+   DIÁLOGO
+========================= */
+
+.dialogue {
+    background: #f9fafb;
+    border: 1px solid #e5e7eb;
+    padding: 18px;
+    border-radius: 10px;
+    margin-bottom: 25px;
+}
+
+.speaker {
+    font-weight: bold;
+    color: #1e40af;
+}
+
+.dialogue p {
+    margin: 10px 0;
+}
+
+
+/* =========================
+   EXERCÍCIO
+========================= */
+
+.exercise {
+    margin-top: 20px;
+}
+
+.exercise h3 {
+    margin-bottom: 15px;
+}
+
+.question {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+
+/* =========================
+   INPUT
+========================= */
+
+.answer {
+    width: 100%;
+    padding: 14px;
+    font-size: 16px;
+    border: 2px solid #d1d5db;
+    border-radius: 10px;
+    outline: none;
+    margin-bottom: 15px;
+    transition: 0.2s;
+}
+
+.answer:focus {
+    border-color: #2563eb;
+}
+
+
+/* =========================
+   TEXTAREA
+========================= */
+
+textarea.answer {
+    min-height: 100px;
+    resize: vertical;
+}
+
+
+/* =========================
+   ALTERNATIVAS
+========================= */
+
+.options {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.option {
+    background: white;
+    border: 2px solid #d1d5db;
+    padding: 14px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.option:hover {
+    border-color: #2563eb;
+    background: #eff6ff;
+}
+
+.option input {
+    margin-right: 8px;
+}
+
+
+/* =========================
+   BOTÕES
+========================= */
+
+.buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+button {
+    border: none;
+    padding: 13px 20px;
+    border-radius: 10px;
+    font-size: 15px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.2s;
+}
+
+.btn-check {
+    background: #2563eb;
+    color: white;
+}
+
+.btn-check:hover {
+    background: #1d4ed8;
+}
+
+.btn-next {
+    background: #111827;
+    color: white;
+}
+
+.btn-next:hover {
+    background: #374151;
+}
+
+.btn-back {
+    background: #e5e7eb;
+    color: #111827;
+}
+
+
+/* =========================
+   BOTÃO DE ÁUDIO
+========================= */
+
+.btn-audio {
+    background: #fef3c7;
+    color: #92400e;
+    margin-bottom: 15px;
+}
+
+.btn-audio:hover {
+    background: #fde68a;
+}
+
+
+/* =========================
+   FEEDBACK
+========================= */
+
+.feedback {
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 10px;
+    display: none;
+}
+
+.feedback.correct {
+    display: block;
+    background: #dcfce7;
+    color: #166534;
+    border: 1px solid #86efac;
+}
+
+.feedback.wrong {
+    display: block;
+    background: #fee2e2;
+    color: #991b1b;
+    border: 1px solid #fca5a5;
+}
+
+
+/* =========================
+   DICA
+========================= */
+
+.hint {
+    background: #fff7ed;
+    border-left: 5px solid #f97316;
+    padding: 15px;
+    margin-top: 20px;
+    border-radius: 8px;
+}
+
+.hint strong {
+    color: #c2410c;
+}
+
+
+/* =========================
+   VOCABULÁRIO
+========================= */
+
+.vocabulary {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.word-card {
+    background: #f3f4f6;
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+}
+
+.word-card strong {
+    display: block;
+    color: #1d4ed8;
+    font-size: 17px;
+    margin-bottom: 5px;
+}
+
+
+/* =========================
+   RODAPÉ
+========================= */
+
+footer {
+    text-align: center;
+    margin-top: 40px;
+    padding: 20px;
+    color: #6b7280;
+    font-size: 13px;
+}
+
+
+/* =========================
+   RESPONSIVIDADE
+========================= */
+
+@media (max-width: 600px) {
+
+    .container {
+        width: 95%;
+        margin: 20px auto;
+    }
+
+    .card {
+        padding: 20px;
+    }
+
+    .vocabulary {
+        grid-template-columns: 1fr;
+    }
+
+    .buttons {
+        flex-direction: column;
+    }
+
+    button {
+        width: 100%;
+    }
+
+}GREETINGS
+Activity 1 / 5
+
+OBSERVE
+
+A: Good morning!
+B: Good morning! How are you?
+A: I'm fine, thank you.
+
+What expression is used in the morning?
+
+[ Digite sua resposta ]
+
+[ CHECK ]
+
+✓ Correct!
+"Good morning" is used before noon.
+
+[ ← Back ] [ Next activity → ]
