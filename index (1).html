@@ -1,0 +1,458 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Greetings | Teacher Moraes</title>
+<style>
+/* =========================
+   CONFIGURAÇÕES GERAIS
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f4f7fb;
+    color: #1f2937;
+    min-height: 100vh;
+}
+
+
+/* =========================
+   CABEÇALHO
+========================= */
+
+header {
+    background: #1e3a8a;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 28px;
+    margin-bottom: 5px;
+}
+
+header p {
+    font-size: 14px;
+    opacity: 0.9;
+}
+
+
+/* =========================
+   CONTAINER PRINCIPAL
+========================= */
+
+.container {
+    width: 90%;
+    max-width: 750px;
+    margin: 40px auto;
+}
+
+
+/* =========================
+   PROGRESSO
+========================= */
+
+.progress-area {
+    margin-bottom: 20px;
+}
+
+.progress-text {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 12px;
+    background: #dbe3ef;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.progress {
+    width: 20%;
+    height: 100%;
+    background: #2563eb;
+    transition: 0.3s;
+}
+
+
+/* =========================
+   CARD DA ATIVIDADE
+========================= */
+
+.card {
+    background: white;
+    border-radius: 16px;
+    padding: 30px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+
+/* =========================
+   TIPO DE ATIVIDADE
+========================= */
+
+.stage {
+    display: inline-block;
+    background: #dbeafe;
+    color: #1d4ed8;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+
+/* =========================
+   TÍTULOS
+========================= */
+
+.card h2 {
+    font-size: 26px;
+    margin-bottom: 10px;
+    color: #111827;
+}
+
+.instruction {
+    color: #6b7280;
+    margin-bottom: 25px;
+}
+
+
+/* =========================
+   BLOCO DE CONTEÚDO
+========================= */
+
+.lesson-box {
+    background: #eff6ff;
+    border-left: 5px solid #2563eb;
+    padding: 18px;
+    border-radius: 10px;
+    margin-bottom: 25px;
+}
+
+.lesson-box h3 {
+    margin-bottom: 10px;
+}
+
+.lesson-box p {
+    margin: 7px 0;
+}
+
+
+/* =========================
+   DIÁLOGO
+========================= */
+
+.dialogue {
+    background: #f9fafb;
+    border: 1px solid #e5e7eb;
+    padding: 18px;
+    border-radius: 10px;
+    margin-bottom: 25px;
+}
+
+.speaker {
+    font-weight: bold;
+    color: #1e40af;
+}
+
+.dialogue p {
+    margin: 10px 0;
+}
+
+
+/* =========================
+   EXERCÍCIO
+========================= */
+
+.exercise {
+    margin-top: 20px;
+}
+
+.exercise h3 {
+    margin-bottom: 15px;
+}
+
+.question {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+
+/* =========================
+   INPUT
+========================= */
+
+.answer {
+    width: 100%;
+    padding: 14px;
+    font-size: 16px;
+    border: 2px solid #d1d5db;
+    border-radius: 10px;
+    outline: none;
+    margin-bottom: 15px;
+    transition: 0.2s;
+}
+
+.answer:focus {
+    border-color: #2563eb;
+}
+
+
+/* =========================
+   TEXTAREA
+========================= */
+
+textarea.answer {
+    min-height: 100px;
+    resize: vertical;
+}
+
+
+/* =========================
+   ALTERNATIVAS
+========================= */
+
+.options {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.option {
+    background: white;
+    border: 2px solid #d1d5db;
+    padding: 14px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.option:hover {
+    border-color: #2563eb;
+    background: #eff6ff;
+}
+
+.option input {
+    margin-right: 8px;
+}
+
+
+/* =========================
+   BOTÕES
+========================= */
+
+.buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+button {
+    border: none;
+    padding: 13px 20px;
+    border-radius: 10px;
+    font-size: 15px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.2s;
+}
+
+.btn-check {
+    background: #2563eb;
+    color: white;
+}
+
+.btn-check:hover {
+    background: #1d4ed8;
+}
+
+.btn-next {
+    background: #111827;
+    color: white;
+}
+
+.btn-next:hover {
+    background: #374151;
+}
+
+.btn-back {
+    background: #e5e7eb;
+    color: #111827;
+}
+
+
+/* =========================
+   BOTÃO DE ÁUDIO
+========================= */
+
+.btn-audio {
+    background: #fef3c7;
+    color: #92400e;
+    margin-bottom: 15px;
+}
+
+.btn-audio:hover {
+    background: #fde68a;
+}
+
+
+/* =========================
+   FEEDBACK
+========================= */
+
+.feedback {
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 10px;
+    display: none;
+}
+
+.feedback.correct {
+    display: block;
+    background: #dcfce7;
+    color: #166534;
+    border: 1px solid #86efac;
+}
+
+.feedback.wrong {
+    display: block;
+    background: #fee2e2;
+    color: #991b1b;
+    border: 1px solid #fca5a5;
+}
+
+
+/* =========================
+   DICA
+========================= */
+
+.hint {
+    background: #fff7ed;
+    border-left: 5px solid #f97316;
+    padding: 15px;
+    margin-top: 20px;
+    border-radius: 8px;
+}
+
+.hint strong {
+    color: #c2410c;
+}
+
+
+/* =========================
+   VOCABULÁRIO
+========================= */
+
+.vocabulary {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.word-card {
+    background: #f3f4f6;
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+}
+
+.word-card strong {
+    display: block;
+    color: #1d4ed8;
+    font-size: 17px;
+    margin-bottom: 5px;
+}
+
+
+/* =========================
+   RODAPÉ
+========================= */
+
+footer {
+    text-align: center;
+    margin-top: 40px;
+    padding: 20px;
+    color: #6b7280;
+    font-size: 13px;
+}
+
+
+/* =========================
+   RESPONSIVIDADE
+========================= */
+
+@media (max-width: 600px) {
+
+    .container {
+        width: 95%;
+        margin: 20px auto;
+    }
+
+    .card {
+        padding: 20px;
+    }
+
+    .vocabulary {
+        grid-template-columns: 1fr;
+    }
+
+    .buttons {
+        flex-direction: column;
+    }
+
+    button {
+        width: 100%;
+    }
+
+}
+button:disabled{opacity:.5;cursor:not-allowed}.option:has(input:checked){border-color:#2563eb;background:#eff6ff}.progress{width:0}.stage{letter-spacing:.04em}.feedback{line-height:1.5}.card{min-height:410px}.instruction{line-height:1.5}.hint{line-height:1.5} .muted{color:#6b7280;font-size:14px;margin-top:12px} .buttons{flex-wrap:wrap} .question{line-height:1.5} .answer{font-family:inherit} .btn-reset{background:#e5e7eb;color:#111827;margin-top:12px} button:focus-visible,.answer:focus-visible,.option:focus-within{outline:3px solid #f59e0b;outline-offset:3px}
+</style>
+</head>
+<body>
+<header><h1>Greetings 👋</h1><p>Inglês Autodidata · Teacher Moraes</p></header>
+<main class="container">
+<div class="progress-area"><div class="progress-text"><strong id="counter">Atividade 1 de 6</strong><span id="done">0 concluídas</span></div><div class="progress-bar" role="progressbar" aria-label="Progresso" aria-valuemin="0" aria-valuemax="6" aria-valuenow="0"><div class="progress" id="progress"></div></div></div>
+<section class="card" aria-live="polite"><span class="stage" id="stage"></span><h2 id="title"></h2><p class="instruction" id="instruction"></p><div id="content"></div><div class="exercise"><h3 id="question"></h3><div id="response"></div><button class="btn-check" id="check" type="button">Verificar resposta</button><div class="feedback" id="feedback" role="status"></div></div><div class="buttons"><button class="btn-back" id="back" type="button">← Voltar</button><button class="btn-next" id="next" type="button">Próxima →</button></div></section>
+<footer><p>Suas respostas ficam salvas neste navegador.</p><button class="btn-reset" id="reset" type="button">Recomeçar atividade</button></footer>
+</main>
+<script>
+const activities=[
+{stage:'1 · OBSERVAR',title:'Leia o diálogo',instruction:'Observe as expressões em inglês e a situação.',content:'<div class="dialogue"><p><span class="speaker">Ana:</span> Good morning, Ben!</p><p><span class="speaker">Ben:</span> Good morning! How are you?</p><p><span class="speaker">Ana:</span> I’m fine, thank you.</p></div><div class="lesson-box"><h3>Vocabulário</h3><p><strong>Good morning</strong> = Bom dia</p><p><strong>How are you?</strong> = Como você está?</p></div>',question:'Qual expressão Ana usa para cumprimentar Ben?',type:'text',answers:['good morning'],explanation:'“Good morning” é um cumprimento usado pela manhã.'},
+{stage:'2 · PREVER',title:'Escolha uma resposta',instruction:'Imagine que uma pessoa acabou de dizer “How are you?”',question:'Qual resposta combina com essa pergunta?',type:'choice',options:['I’m fine, thank you.','Good night!','My name is morning.'],answer:0,explanation:'“I’m fine, thank you” responde à pergunta “How are you?”'},
+{stage:'3 · PREENCHER',title:'Complete a expressão',instruction:'Você encontra um colega às 8 horas da manhã.',question:'Good ______, Allan!',type:'text',answers:['morning'],explanation:'Às 8h, podemos dizer “Good morning!”'},
+{stage:'4 · CORRIGIR',title:'Corrija o cumprimento',instruction:'Alguém encontra um amigo às 8h e diz “Good night!”',question:'Escreva o cumprimento adequado para esse encontro.',type:'text',answers:['good morning','good morning!'],explanation:'“Good morning!” é usado para cumprimentar alguém de manhã. “Good night” costuma ser uma despedida à noite.'},
+{stage:'5 · MODIFICAR',title:'Deixe mais informal',instruction:'Troque a saudação formal por uma saudação informal.',content:'<div class="lesson-box"><p><strong>Original:</strong> Hello, my name is Allan.</p><p><strong>Modelo:</strong> Hi, I’m Allan.</p></div>',question:'Como você diria “Hello, my name is Ana” de modo mais informal?',type:'text',answers:["hi i'm ana","hi i am ana"],explanation:'Uma opção é “Hi, I’m Ana.”'},
+{stage:'6 · CRIAR',title:'Crie um diálogo',instruction:'Agora use o que praticou. Escreva ao menos duas falas em inglês: um cumprimento e uma resposta.',question:'Seu pequeno diálogo:',type:'create',explanation:'Exemplo: A: Good morning! How are you?  B: I’m fine, thank you. And you?'}
+];
+const key='greetings-teacher-moraes-v1';
+let saved;try{saved=JSON.parse(localStorage.getItem(key))||{}}catch{saved={}};
+let state={index:0,responses:{},completed:{},...saved};
+if(!Number.isInteger(state.index)||state.index<0||state.index>=activities.length)state.index=0;
+const $=id=>document.getElementById(id);
+function persist(){try{localStorage.setItem(key,JSON.stringify(state))}catch{}}
+function normalize(value){return value.normalize('NFKD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/[’‘]/g,"'").replace(/[.!?]+$/g,'').replace(/\s+/g,' ').trim()}
+function render(){const i=state.index,a=activities[i];$('counter').textContent=`Atividade ${i+1} de ${activities.length}`;const total=Object.keys(state.completed).length;$('done').textContent=`${total} concluída${total===1?'':'s'}`;$('progress').style.width=`${total/activities.length*100}%`;document.querySelector('[role=progressbar]').setAttribute('aria-valuenow',total);$('stage').textContent=a.stage;$('title').textContent=a.title;$('instruction').textContent=a.instruction;$('content').innerHTML=a.content||'';$('question').textContent=a.question;$('feedback').className='feedback';$('feedback').textContent='';$('check').textContent=a.type==='create'?'Salvar diálogo':'Verificar resposta';$('back').disabled=i===0;$('next').textContent=i===activities.length-1?'Ver resultado':'Próxima →';$('next').disabled=!state.completed[i]&&i!==activities.length-1;
+const response=$('response');response.replaceChildren();if(a.type==='choice'){const group=document.createElement('div');group.className='options';a.options.forEach((option,n)=>{const label=document.createElement('label');label.className='option';const input=document.createElement('input');input.type='radio';input.name='answer';input.value=n;input.checked=Number(state.responses[i])===n;input.addEventListener('change',()=>{state.responses[i]=n;persist()});label.append(input,document.createTextNode(option));group.append(label)});response.append(group)}else{const input=document.createElement(a.type==='create'?'textarea':'input');input.className='answer';input.setAttribute('aria-label','Sua resposta');if(a.type==='text')input.type='text';input.placeholder=a.type==='create'?'A: Hello!\nB: Hi! How are you?':'Escreva em inglês';input.value=state.responses[i]||'';input.addEventListener('input',()=>{state.responses[i]=input.value;persist()});if(a.type==='text')input.addEventListener('keydown',e=>{if(e.key==='Enter')check()});response.append(input)}if(state.completed[i])show(true,a.explanation)}
+function show(correct,message){const el=$('feedback');el.className='feedback '+(correct?'correct':'wrong');el.textContent=(correct?'✓ ':'Tente novamente. ')+message}
+function check(){const i=state.index,a=activities[i],raw=state.responses[i];if(raw===undefined||raw===null||String(raw).trim()===''){show(false,'Digite ou selecione uma resposta.');return}let correct;if(a.type==='choice')correct=Number(raw)===a.answer;else if(a.type==='create')correct=String(raw).trim().split(/\n/).filter(x=>x.trim()).length>=2;else correct=a.answers.some(answer=>normalize(raw)===normalize(answer));if(correct){state.completed[i]=true;persist();render()}else show(false,a.type==='create'?'Escreva duas falas, cada uma em uma linha.':'Leia o enunciado e tente outra vez.')}
+$('check').addEventListener('click',check);$('back').addEventListener('click',()=>{if(state.index>0){state.index--;persist();render()}});$('next').addEventListener('click',()=>{if(state.index<activities.length-1){if(!state.completed[state.index])return;state.index++;persist();render()}else{const total=Object.keys(state.completed).length;$('feedback').className='feedback correct';$('feedback').textContent=`Você concluiu ${total} de ${activities.length} atividades!`;}});$('reset').addEventListener('click',()=>{if(confirm('Apagar as respostas e recomeçar?')){state={index:0,responses:{},completed:{}};persist();render()}});render();
+</script>
+</body>
+</html>

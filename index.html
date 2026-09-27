@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Inglês Autodidata — aprenda inglês através da literatura clássica com o Prof. Allan Moraes.">
+  <title>Inglês Autodidata | Allan Moraes</title>
+
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      color: #1f2937;
+      background: #ffffff;
+      line-height: 1.6;
+    }
+
+    a { text-decoration: none; color: inherit; }
+
+    .container {
+      width: min(1120px, 92%);
+      margin: 0 auto;
+    }
+
+    .topbar {
+      background: #111827;
+      color: white;
+      text-align: center;
+      padding: 10px 16px;
+      font-weight: 700;
+      font-size: 14px;
+    }
+
+    .hero {
+      background: linear-gradient(135deg, #eef7f1, #ffffff);
+      padding: 82px 0;
+      text-align: center;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      color: #176b47;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-size: 13px;
+      margin-bottom: 18px;
+    }
+
+    h1 {
+      font-size: clamp(38px, 7vw, 72px);
+      line-height: 1.05;
+      max-width: 900px;
+      margin: 0 auto 24px;
+      color: #14261e;
+    }
+
+    .hero p {
+      max-width: 760px;
+      margin: 0 auto 30px;
+      font-size: 20px;
+      color: #4b5563;
+    }
+
+    .btn {
+      display: inline-block;
+      background: #176b47;
+      color: white;
+      padding: 16px 26px;
+      border-radius: 10px;
+      font-weight: 800;
+      transition: .2s;
+      border: none;
+      cursor: pointer;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+      opacity: .92;
+    }
+
+    .teacher-tag {
+      margin-top: 26px;
+      font-weight: 700;
+    }
+
+    section { padding: 76px 0; }
+
+    .section-label {
+      color: #176b47;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-size: 13px;
+      font-weight: 800;
+      text-align: center;
+      margin-bottom: 8px;
+    }
+
+    h2 {
+      text-align: center;
+      font-size: clamp(30px, 5vw, 46px);
+      line-height: 1.15;
+      color: #14261e;
+      max-width: 800px;
+      margin: 0 auto 18px;
+    }
+
+    .section-intro {
+      text-align: center;
+      max-width: 720px;
+      margin: 0 auto 42px;
+      color: #6b7280;
+      font-size: 18px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+
+    .grid.three { grid-template-columns: repeat(3, 1fr); }
+
+    .card {
+      background: white;
+      border: 1px solid #e5e7eb;
+      border-radius: 16px;
+      padding: 28px;
+      box-shadow: 0 8px 25px rgba(0,0,0,.04);
+    }
+
+    .card .icon {
+      font-size: 34px;
+      margin-bottom: 14px;
+    }
+
+    .card h3 {
+      margin-bottom: 10px;
+      color: #14261e;
+    }
+
+    .soft { background: #f7faf8; }
+
+    .highlight {
+      max-width: 800px;
+      margin: 34px auto 0;
+      padding: 28px;
+      border-radius: 16px;
+      background: #eaf5ef;
+      text-align: center;
+    }
+
+    .quote {
+      font-size: 16px;
+      margin-bottom: 20px;
+      color: #374151;
+    }
+
+    .stars {
+      color: #b7791f;
+      letter-spacing: 2px;
+      margin-bottom: 14px;
+    }
+
+    .features {
+      max-width: 720px;
+      margin: 30px auto;
+      display: grid;
+      gap: 14px;
+    }
+
+    .feature {
+      background: white;
+      border: 1px solid #e5e7eb;
+      padding: 17px 20px;
+      border-radius: 12px;
+      font-weight: 700;
+    }
+
+    .center { text-align: center; }
+
+    .small {
+      font-size: 13px;
+      color: #6b7280;
+      margin-top: 12px;
+    }
+
+    .guarantee {
+      max-width: 850px;
+      margin: 0 auto;
+      background: #14261e;
+      color: white;
+      padding: 42px;
+      border-radius: 20px;
+      text-align: center;
+    }
+
+    .guarantee h2 { color: white; }
+    .guarantee p { color: #e5e7eb; }
+
+    .bio {
+      display: grid;
+      grid-template-columns: 180px 1fr;
+      gap: 36px;
+      align-items: center;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .avatar {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      background: #eaf5ef;
+      font-size: 70px;
+    }
+
+    .bio h2 { text-align: left; margin-left: 0; }
+
+    .instagram {
+      display: inline-block;
+      margin-bottom: 12px;
+      color: #176b47;
+      font-weight: 800;
+    }
+
+    .faq {
+      max-width: 800px;
+      margin: 34px auto 0;
+    }
+
+    details {
+      border-bottom: 1px solid #d1d5db;
+      padding: 20px 4px;
+    }
+
+    summary {
+      cursor: pointer;
+      font-weight: 800;
+      color: #14261e;
+    }
+
+    details p {
+      padding-top: 12px;
+      color: #4b5563;
+    }
+
+    footer {
+      background: #111827;
+      color: #d1d5db;
+      padding: 34px 0;
+      text-align: center;
+      font-size: 14px;
+    }
+
+    @media (max-width: 850px) {
+      .grid, .grid.three { grid-template-columns: 1fr 1fr; }
+      .bio { grid-template-columns: 1fr; text-align: center; }
+      .avatar { margin: auto; }
+      .bio h2 { text-align: center; margin: 0 auto 18px; }
+    }
+
+    @media (max-width: 560px) {
+      .grid, .grid.three { grid-template-columns: 1fr; }
+      section { padding: 56px 0; }
+      .hero { padding: 62px 0; }
+      .hero p { font-size: 17px; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="topbar">Vagas Limitadas — Turma Fechando em Breve</div>
+
+  <header class="hero">
+    <div class="container">
+      <span class="eyebrow">Inglês Autodidata</span>
+      <h1>Destrave seu Inglês com Obras-Primas da Literatura</h1>
+      <p>
+        Aprenda inglês de verdade lendo grandes clássicos da literatura mundial,
+        com leitura, áudio, prática e estudo contextualizado.
+      </p>
+      <a class="btn" href="#metodo">Conheça o Método</a>
+      <div class="teacher-tag">👨‍🏫 Prof. Allan Moraes</div>
+    </div>
+  </header>
+
+  <section>
+    <div class="container">
+      <div class="section-label">Você se identifica?</div>
+      <h2>Por que tanta gente estuda inglês por anos e ainda trava?</h2>
+      <p class="section-intro">
+        O problema muitas vezes não está na capacidade do aluno, mas na forma como o estudo é organizado.
+      </p>
+
+      <div class="grid">
+        <div class="card">
+          <div class="icon">📱</div>
+          <h3>Aplicativos isolados</h3>
+          <p>Sequências e exercícios ajudam, mas podem não preparar o aluno para usar o idioma em contextos reais.</p>
+        </div>
+
+        <div class="card">
+          <div class="icon">🏫</div>
+          <h3>Gramática sem contexto</h3>
+          <p>Regras são importantes, mas ficam muito mais úteis quando aparecem dentro de textos e situações significativas.</p>
+        </div>
+
+        <div class="card">
+          <div class="icon">😰</div>
+          <h3>Medo de errar</h3>
+          <p>A insegurança pode impedir que o estudante coloque em prática aquilo que já consegue compreender.</p>
+        </div>
+
+        <div class="card">
+          <div class="icon">🔄</div>
+          <h3>Falta de continuidade</h3>
+          <p>Sem um caminho organizado, é comum começar várias vezes e abandonar o estudo algumas semanas depois.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="soft" id="metodo">
+    <div class="container">
+      <div class="section-label">O Método</div>
+      <h2>Inglês através da literatura que atravessa gerações</h2>
+
+      <div class="grid three">
+        <div class="card">
+          <div class="icon">📖</div>
+          <h3>Aprenda</h3>
+          <p>Explore vocabulário e estruturas da língua dentro de histórias e textos contextualizados.</p>
+        </div>
+
+        <div class="card">
+          <div class="icon">🧠</div>
+          <h3>Memorize</h3>
+          <p>Revise palavras, expressões e padrões importantes para transformar exposição em conhecimento duradouro.</p>
+        </div>
+
+        <div class="card">
+          <div class="icon">🗣️</div>
+          <h3>Pratique</h3>
+          <p>Use leitura, escuta e exercícios para transformar o conteúdo estudado em habilidade prática.</p>
+        </div>
+      </div>
+
+      <div class="highlight">
+        <h3>📚 Imersão Literária</h3>
+        <p>
+          Organize uma rotina de leitura e áudio em inglês usando histórias como ponto de partida
+          para desenvolver compreensão, vocabulário e autonomia.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="section-label">O que você recebe</div>
+      <h2>Um caminho organizado para estudar inglês</h2>
+
+      <div class="features">
+        <div class="feature">🎓 Conteúdo organizado por nível</div>
+        <div class="feature">📚 Literatura e textos em inglês</div>
+        <div class="feature">🎧 Atividades de leitura e áudio</div>
+        <div class="feature">📖 Exercícios e prática guiada</div>
+        <div class="feature">🧭 Orientação para o estudo autodidata</div>
+        <div class="feature">♾️ Material digital para estudar no seu ritmo</div>
+      </div>
+
+      <div class="center">
+        <a class="btn" href="#faq">Ver Dúvidas Frequentes</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="soft">
+    <div class="container">
+      <div class="guarantee">
+        <div style="font-size:50px">🛡️</div>
+        <h2>Garantia de 7 Dias</h2>
+        <p>
+          Consulte as condições apresentadas na página de pagamento antes da compra.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="bio">
+        <div class="avatar">👨‍🏫</div>
+        <div>
+          <div class="section-label" style="text-align:left">Quem é o professor</div>
+          <h2>Allan Moraes</h2>
+          <a class="instagram" href="#" aria-label="Instagram">@teacher_moraes</a>
+          <p>
+            Professor de inglês com formação na área de Letras e interesse em literatura,
+            tecnologia e aprendizagem autodidata. O projeto Inglês Autodidata une materiais
+            de leitura, áudio e prática em um caminho organizado para quem deseja estudar
+            com maior autonomia.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="soft" id="faq">
+    <div class="container">
+      <div class="section-label">Dúvidas Frequentes</div>
+      <h2>Perguntas e Respostas</h2>
+
+      <div class="faq">
+        <details>
+          <summary>Preciso ter alguma base em inglês para começar?</summary>
+          <p>Não necessariamente. A proposta é organizar o conteúdo por nível para permitir uma progressão gradual.</p>
+        </details>
+
+        <details>
+          <summary>Quanto tempo por dia preciso dedicar?</summary>
+          <p>Você pode adaptar a rotina à sua disponibilidade. A consistência tende a ser mais importante que sessões muito longas e esporádicas.</p>
+        </details>
+
+        <details>
+          <summary>Como funcionam os materiais?</summary>
+          <p>Os materiais combinam explicações, leitura, áudio e atividades para estudo guiado e prática independente.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>© 2026 Inglês Autodidata — Prof. Allan Moraes. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
